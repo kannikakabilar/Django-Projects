@@ -1,0 +1,35 @@
+{% load static %}
+{% block custom_css %}
+<link rel="stylesheet" href="{% static 'css/home_style.css' %}">
+{% endblock custom_css %}
+
+{% block content %}
+    <body style="background: rgba(0, 3, 96, 0.495);">
+    <h1 style="text-align:center; padding-top: 2%;">Edit Profile</h1>
+    <form action="updaterecord/{{ mymember.id }}" method="post" style="text-align: center;">
+        {% csrf_token %}
+        <div>
+            <a style="text-align: left;">Full Name: </a><br>
+            <input name="name" value="{{ mymember.fullname }}">
+            <br><br>
+            Subjects of Interest: <br>
+            <input name="soi" value="{{ mymember.soi }}">
+            <br><br>
+            ID: <br>
+            <input name="id" value="{{ mymember.id }}">
+            <br><br>
+            Email: <br>
+            <input name="email" value="{{ mymember.email }}">
+            <br><br>
+            Role: (Only admins can change your role)<br>
+            <input name="role" value="{{ mymember.role }}" disabled>
+            <br><br>
+        </div>
+        <input style="padding: 0.5em; font-size: 23px; border-radius: 10px; border-color: #000680;" class="btn btn-light btn-lg" type="submit" value="Save Changes">
+        <br><br>
+    </form>
+    <p style="text-align: center;">
+    <a style="padding: 0.5em; font-size: 20px; border-radius: 10px; background-color: rgb(163, 0, 0); color: white;" href="delete/{{ mymember.id }}">Leave Club</a>
+    </p>
+</body>  
+{% endblock content %}

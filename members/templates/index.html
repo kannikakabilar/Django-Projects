@@ -1,0 +1,70 @@
+
+{% load static %}
+{% block custom_css %}
+<link rel="stylesheet" href="{% static 'css/home_style.css' %}">
+{% endblock custom_css %}
+{% block content %}
+    <body id="home-content">    
+        <h1 style="padding: 1%; color: #000680; background: rgba(255, 255, 255, 0.495); text-align: center; -webkit-text-stroke: 1.5px rgb(0, 3, 96); font-size: 45px;">University of Toronto <br> Google Developer Student Club <br><a style="font-size: 20px; -webkit-text-stroke: 0.5px rgb(0, 3, 96);">Webpage designed by Kannika Kabilar using Django</a></h1>
+        <div>
+            <a href="https://www.utoronto.ca/"><img
+                src="{% static 'img/uoft.png' %}"
+                width="90px"
+                height="90px"
+                alt="uoft"
+                display="inline-block"
+                
+                
+            /></a><a style="color: #000680; font-size: 125px;">X</a><a href="https://developers.google.com/"><img
+                src="{% static 'img/gdsc.png' %}"
+                width="100px"
+                height="90px"
+                alt="gdsc"
+                display="inline-block"
+            /></a>
+        </div>
+        <p>
+            <a style="padding: 0.5em; font-size: 30px; border-radius: 10px; border-color: #000680;" class="btn btn-light btn-lg" href="add/" role="button">Join Now!</a>
+        </p>
+        <a style="color: #000680; font-size: 50px; -webkit-text-stroke: 15px rgb(0, 3, 96);">.<br>.<br>.</a>
+        <div style="background: rgba(0, 3, 96, 0.495);">
+            <p><h1 style="padding-top: 2%;">We Offer Opportunities To ...</h1>
+            <li style="text-align: left; padding-left: 10%; padding-right: 10%;"><a style="font-weight:bold;">Connect: &nbsp;</a>Meet students interested in developer technologies with diverse backgrounds and different majors</li><br>
+            <li style="text-align: left; padding-left: 10%; padding-right: 10%;"><a style="font-weight:bold;">Learn: &nbsp;</a>Learn about a range of technical topics and gain new skills through hands-on workshops, events, talks, and project-building activities online and in-person</li><br>
+            <li style="text-align: left; padding-left: 10%; padding-right: 10%;"><a style="font-weight:bold;">Grow: &nbsp;</a>Apply new learnings to build great solutions for local problems. Advance your skills, career, and network. Give back to your community by helping others learn.</li><br>
+            </p>
+        </div>
+        <a style="padding-bottom: 100px; color: #000680; font-size: 50px; -webkit-text-stroke: 15px rgb(0, 3, 96);">.&emsp;.&emsp;.</a><br><br>
+        <div style="background: rgba(255, 255, 255, 0.495);">
+            <h1 style="padding-top: 2%; color:#000680;">Current Members</h1>
+        <div><table border="1" style="margin-left: auto; margin-right: auto; color: #000680; font-size: 30px;">
+            <td style="font-weight:bold;">ID</td><td style="font-weight:bold;">Name</td><td style="font-weight:bold;">Subjects of Interest</td><td style="font-weight:bold;">Role</td>
+            {% for x in mymembers %}
+                <tr>
+
+                    <td>{{ x.id }}</td>
+                    <td><a href="update/{{ x.id }}">{{ x.fullname }}</a></td>
+                    <td>{{ x.soi }}</td>
+                    <td>{{ x.role }}</td>
+                </tr>
+            {% endfor %}
+        </table></div><br>
+        <p>
+            <a style="padding: 0.5em; font-size: 30px; border-radius: 10px; border-color: #000680;" class="btn btn-light btn-lg" href="add/" role="button">Become a member</a>
+        </p><br><br>
+        </div><br>
+        <a style="padding-bottom: 100px; color: #000680; font-size: 50px; -webkit-text-stroke: 15px rgb(0, 3, 96);">.&emsp;.&emsp;.</a><br><br>
+        <div style="background: rgba(0, 3, 96, 0.495);">
+            <h1 style="padding-top: 2%;">About Us</h1>
+            <p style="text-align: left; padding-left: 5%; padding-right: 5%;">The Google Developer Student Club (GDSC) - University of Toronto powered by Google Developers is a student-led group that aims to inspire students in the field of technology. Our community is open to any student in any discipline wishing to advance their skills in developer technology and no prior developer experience is required to be a part. We provide workshops, events and hands-on projects that support and empower all university students who are passionate about growing as a developer to solve real-time problems and increase their knowledge of developer products.</p>
+            <p>
+                Sign up for the Mailing List: <a style="color: white;" href="http://eepurl.com/g_6HSn">http://eepurl.com/g_6HSn</a><br><br>
+
+                Join our Discord Server: <a style="color: white;" href="https://discord.gg/XNPgmV5Fyr">https://discord.gg/XNPgmV5Fyr</a><br><br>
+            
+                Facebook: <a style="color: white;" href="https://www.facebook.com/utsgdsc">https://www.facebook.com/utsgdsc</a><br><br>
+            </p>
+        </div>
+        
+    </body>  
+{% endblock content %}

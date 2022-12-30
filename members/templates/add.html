@@ -1,0 +1,27 @@
+{% load static %}
+{% block custom_css %}
+<link rel="stylesheet" href="{% static 'css/home_style.css' %}">
+{% endblock custom_css %}
+
+{% block content %}
+<body style="background: rgba(0, 3, 96, 0.495);">
+    <h1 style="text-align:center; padding-top: 2%;">Add member</h1>
+
+    <form action="addrecord/" method="post" style="text-align: center;">
+        {% csrf_token %}
+        Full Name:<br>
+        <input name="name">
+        <br><br>
+        Subjects of Interest:<br>
+        <input name="soi">
+        <br><br>
+        Email:<br>
+        <input name="email">
+        <br><br>
+        Role: (You will be assigned as a Developer by default, only admins can change your role)<br>
+        <input name="role" value="Developer" disabled>
+        <br><br>
+        <input style="padding: 0.5em; font-size: 23px; border-radius: 10px; border-color: #000680;" class="btn btn-light btn-lg" type="submit" value="Submit">
+    </form>
+</body>  
+{% endblock content %}

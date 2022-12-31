@@ -43,7 +43,7 @@ Go to: http://127.0.0.1:8000/members/
 <br />
 - Running it from scratch <br />
 Navigate to the application's directory and type the following commands. <br /> 
-```
+```python
 > python3 -m venv myvirenv
 > source myvirenv/bin/activate
 > python3 -m pip install Django
@@ -56,7 +56,7 @@ Go to: http://127.0.0.1:8000/members/
 <br />
 <br />
 - Create a superuser for admin purposes. 
-```
+```python
 > python3 manage.py createsuperuser
 ```
 <br />

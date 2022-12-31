@@ -23,3 +23,13 @@ Students can edit and view their profile when they can correctly provide their p
 Admins are given full control and can modify any records in the database.
 <br />
 ![Quote](https://github.com/kannikakabilar/UofT-Club-Signup-App/blob/main/screenshots/Screen%20Shot%202022-12-29%20at%209.59.50%20PM.png)
+<br />
+<br />
+# How To Run
+Navigate to the application's directory and type the following commands. 
+```md
+> source bin/activate
+> python3 manage.py runserver
+```
+<br />
+Goto: http://127.0.0.1:8000/members/

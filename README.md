@@ -62,4 +62,14 @@ Go to: http://127.0.0.1:8000/members/
 ```
 <br />
 Go to: http://127.0.0.1:8000/admin
+<br /> 
+- Using an existing virtual environment with test records <br />
+Navigate to the application's directory and type the following commands. 
+```md
+> source bin/activate
+> python3 manage.py runserver
+```
+<br />
+Go to: http://127.0.0.1:8000/members/
+<br />
 <br />

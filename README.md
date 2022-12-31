@@ -57,7 +57,8 @@ Go to: http://127.0.0.1:8000/members/
 <br />
 - Create a superuser for admin purposes <br />
 ```md
-> python manage.py createsuperuser
+> source bin/activate
+> python3 manage.py runserver
 ```
 <br />
 Go to: http://127.0.0.1:8000/admin

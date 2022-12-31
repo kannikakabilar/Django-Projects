@@ -26,12 +26,12 @@ Admins are given full control and can modify any records in the database.
 <br />
 <br />
 # How To Run
-- requirements; the following needs to be installed
+- Requirements; the following needs to be installed
 ```md
 > python3 --version
 > pip --version
 ```
-- using an existing virtual environment with test records
+- Using an existing virtual environment with test records <br />
 Navigate to the application's directory and type the following commands. 
 ```md
 > source bin/activate
@@ -41,8 +41,8 @@ Navigate to the application's directory and type the following commands.
 Go to: http://127.0.0.1:8000/members/
 <br />
 <br />
-- running it from scratch
-Navigate to the application's directory and type the following commands.
+- Running it from scratch <br />
+Navigate to the application's directory and type the following commands. <br />
 ```md
 > python3 -m venv myvirenv
 > source myvirenv/bin/activate
@@ -55,7 +55,7 @@ Navigate to the application's directory and type the following commands.
 Go to: http://127.0.0.1:8000/members/
 <br />
 <br />
-- create a superuser for admin purposes
+- Create a superuser for admin purposes <br />
 ```md
 > python manage.py createsuperuser
 ```

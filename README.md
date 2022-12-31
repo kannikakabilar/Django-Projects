@@ -37,10 +37,11 @@ Navigate to the application's directory and type the following commands.
 > source bin/activate
 > python3 manage.py runserver
 ``` 
+- Create a superuser for admin purposes 
 <br />
 Go to: http://127.0.0.1:8000/members/
 <br />
 <br /> 
-- Create a superuser for admin purposes
+
 <br />
 

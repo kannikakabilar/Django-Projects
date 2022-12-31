@@ -42,7 +42,7 @@ Go to: http://127.0.0.1:8000/members/
 <br />
 <br />
 - Running it from scratch <br />
-Navigate to the application's directory and type the following commands. <br />
+Navigate to the application's directory and type the following commands. <br /> 
 ```md
 > python3 -m venv myvirenv
 > source myvirenv/bin/activate
@@ -55,7 +55,7 @@ Navigate to the application's directory and type the following commands. <br />
 Go to: http://127.0.0.1:8000/members/
 <br />
 <br />
-- Create a superuser for admin purposes.
+- Create a superuser for admin purposes. 
 ```md
 > source bin/activate
 > python3 manage.py runserver

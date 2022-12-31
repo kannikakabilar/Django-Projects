@@ -39,6 +39,9 @@ Navigate to the application's directory and type the following commands.
 ``` 
 - Create a superuser for admin purposes 
 <br />
+```md
+> python3 manage.py createsuperuser
+```
 Go to: http://127.0.0.1:8000/members/
 <br />
 <br /> 

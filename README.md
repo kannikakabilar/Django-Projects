@@ -26,10 +26,39 @@ Admins are given full control and can modify any records in the database.
 <br />
 <br />
 # How To Run
+- requirements; the following needs to be installed
+```md
+> python3 --version
+> pip --version
+```
+- using an existing virtual environment with test records
 Navigate to the application's directory and type the following commands. 
 ```md
 > source bin/activate
 > python3 manage.py runserver
 ```
 <br />
-Goto: http://127.0.0.1:8000/members/
+Go to: http://127.0.0.1:8000/members/
+<br />
+<br />
+- running it from scratch
+Navigate to the application's directory and type the following commands.
+```md
+> python3 -m venv myvirenv
+> source myvirenv/bin/activate
+> python3 -m pip install Django
+> python3 manage.py makemigrations members
+> python3 manage.py migrate
+> python3 manage.py runserver
+```
+<br />
+Go to: http://127.0.0.1:8000/members/
+<br />
+<br />
+- create a superuser for admin purposes
+```md
+> python manage.py createsuperuser
+```
+<br />
+Go to: http://127.0.0.1:8000/admin
+<br />
